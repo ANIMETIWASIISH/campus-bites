@@ -1,10 +1,10 @@
 /**
  * Campus Bites Cafe - Simple JavaScript
  * Web Development CA Project 1 (1st Year College Level)
- * Very simple, easy-to-read lines of code for viva & demonstration.
+ * Clear, beginner-friendly functions with full button functionality.
  */
 
-// 1. Mobile Hamburger Menu Toggle
+// 1. Mobile Navigation Hamburger Menu Toggle
 const menuBtn = document.getElementById('menu-btn');
 const navMenu = document.getElementById('nav-menu');
 
@@ -12,7 +12,7 @@ menuBtn.addEventListener('click', function () {
   navMenu.classList.toggle('show');
 });
 
-// Close mobile menu when any navigation link is clicked
+// Close mobile navigation when any link is clicked
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(function (link) {
   link.addEventListener('click', function () {
@@ -22,14 +22,17 @@ navLinks.forEach(function (link) {
 
 // 2. Menu Category Filtering Function
 function filterMenu(category) {
-  // Update active button style
+  // Update active button state
   const buttons = document.querySelectorAll('.filter-btn');
   buttons.forEach(function (btn) {
     btn.classList.remove('active');
   });
-  event.target.classList.add('active');
 
-  // Filter menu items
+  if (window.event && window.event.target) {
+    window.event.target.classList.add('active');
+  }
+
+  // Filter food cards
   const items = document.querySelectorAll('.menu-item');
   items.forEach(function (item) {
     const itemCategory = item.getAttribute('data-category');
@@ -48,9 +51,14 @@ let totalAmount = 0;
 function addToOrder(itemName, price) {
   selectedOrders.push({ name: itemName, price: price });
   totalAmount += price;
-
   updateOrderTray();
-  alert(itemName + ' (₹' + price + ') added to your quick order tray!');
+  alert('Added to your tray: ' + itemName + ' (₹' + price + ')');
+}
+
+function removeFromOrder(index) {
+  totalAmount -= selectedOrders[index].price;
+  selectedOrders.splice(index, 1);
+  updateOrderTray();
 }
 
 function updateOrderTray() {
@@ -58,56 +66,78 @@ function updateOrderTray() {
   const emptyMsg = document.getElementById('order-empty-msg');
   const totalDisplay = document.getElementById('order-total');
 
-  if (selectedOrders.length > 0) {
-    emptyMsg.style.display = 'none';
+  if (selectedOrders.length === 0) {
+    emptyMsg.style.display = 'block';
     orderList.innerHTML = '';
-
-    selectedOrders.forEach(function (item) {
-      const li = document.createElement('li');
-      li.innerHTML = '<span>' + item.name + '</span> <strong>₹' + item.price + '</strong>';
-      orderList.appendChild(li);
-    });
-
-    totalDisplay.innerText = '₹' + totalAmount;
+    totalDisplay.innerText = '₹0';
+    return;
   }
+
+  emptyMsg.style.display = 'none';
+  orderList.innerHTML = '';
+
+  selectedOrders.forEach(function (item, index) {
+    const li = document.createElement('li');
+    li.style.display = 'flex';
+    li.style.justifyContent = 'space-between';
+    li.style.alignItems = 'center';
+    li.style.padding = '6px 0';
+    li.style.borderBottom = '1px solid #ffe0b2';
+
+    li.innerHTML = 
+      '<span>' + item.name + '</span>' +
+      '<div>' +
+        '<strong>₹' + item.price + '</strong> ' +
+        '<button onclick="removeFromOrder(' + index + ')" style="background:none; border:none; color:#d84315; cursor:pointer; font-weight:bold; margin-left:8px;" title="Remove">✕</button>' +
+      '</div>';
+    orderList.appendChild(li);
+  });
+
+  totalDisplay.innerText = '₹' + totalAmount;
 }
 
 function proceedToTableBooking() {
   if (selectedOrders.length === 0) {
-    alert('Please add at least one item to order first!');
+    alert('Your tray is empty! Please click "+ Add to Order" on any item first.');
     return;
   }
 
-  // Pre-fill special request field with order items
+  // Fill in pre-ordered items into the special request field
   const notesField = document.getElementById('notes');
   const itemsSummary = selectedOrders.map(function (item) { return item.name; }).join(', ');
-  notesField.value = 'Pre-ordered items: ' + itemsSummary + ' (Total: ₹' + totalAmount + ')';
+  notesField.value = 'Pre-ordered items: ' + itemsSummary + ' (Tray Total: ₹' + totalAmount + ')';
 
-  // Smooth scroll to booking form
+  // Smoothly scroll down to reservation card
   document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
 }
 
 // 4. Handle Table Booking Submission
 function handleBooking(event) {
-  event.preventDefault(); // Stop page reload
+  event.preventDefault(); // Stop default form reload
 
   const name = document.getElementById('name').value;
   const phone = document.getElementById('phone').value;
+  const college = document.getElementById('college').value;
   const date = document.getElementById('date').value;
   const time = document.getElementById('time').value;
   const people = document.getElementById('people').value;
 
   alert(
-    '🎉 Table Reserved Successfully!\n\n' +
-    'Name: ' + name + '\n' +
-    'Phone: ' + phone + '\n' +
-    'Date & Time: ' + date + ' at ' + time + '\n' +
-    'Party Size: ' + people + '\n\n' +
-    'Show your Student ID at the counter for your 15% discount!'
+    '🎉 Table Reserved Successfully at Campus Bites Cafe!\n\n' +
+    '👤 Name: ' + name + '\n' +
+    '📱 Phone: ' + phone + '\n' +
+    '🎓 College: ' + college + '\n' +
+    '📅 Date & Time: ' + date + ' at ' + time + '\n' +
+    '👥 Group Size: ' + people + '\n' +
+    '💰 Total Pre-order: ₹' + totalAmount + '\n\n' +
+    'Show your College Student ID card at the counter to claim your 15% discount!'
   );
 
-  // Reset form after successful booking
+  // Reset form and order tray
   document.getElementById('booking-form').reset();
+  selectedOrders = [];
+  totalAmount = 0;
+  updateOrderTray();
 }
 
 // Set minimum date to today so students cannot pick past dates
