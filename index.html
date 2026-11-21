@@ -21,13 +21,26 @@
         <span class="logo-text">Bella Vista <em>Bistro</em></span>
       </a>
 
-      <!-- Responsive Mobile Menu Toggle (Pure HTML/CSS) -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </label>
+      <!-- Header actions (Cart + Dark/Light Theme) -->
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Dark/Light Mode">🌙</button>
+        
+        <!-- Cart / Order Summary Trigger -->
+        <button id="cart-toggle-btn" class="cart-btn" aria-label="View Order" title="View Order Summary">
+          <span>🛒</span>
+          <span class="cart-label">Order</span>
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+
+        <!-- Responsive Mobile Menu Toggle (Pure HTML/CSS) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </label>
+      </div>
 
       <nav class="main-nav" aria-label="Main Navigation">
         <ul class="nav-list">
@@ -139,7 +152,10 @@
               <p class="special-desc">
                 Crispy skin wild sea bass served over saffron risotto, blistered cherry tomatoes, and micro-herbs with citrus butter glaze.
               </p>
-              <a href="#reserve" class="card-link">Order / Reserve &rarr;</a>
+              <div class="special-actions">
+                <button type="button" class="btn btn-primary btn-sm btn-add-order" data-name="Pan-Seared Mediterranean Sea Bass" data-price="28.50">+ Add to Order</button>
+                <a href="#reserve" class="card-link">Reserve Table &rarr;</a>
+              </div>
             </div>
           </article>
 
@@ -160,7 +176,10 @@
               <p class="special-desc">
                 Hand-cut egg ribbon pasta tossed in black truffle butter, forest mushrooms, aged Parmigiano Reggiano, and fresh thyme.
               </p>
-              <a href="#reserve" class="card-link">Order / Reserve &rarr;</a>
+              <div class="special-actions">
+                <button type="button" class="btn btn-primary btn-sm btn-add-order" data-name="Truffle Wild Mushroom Pappardelle" data-price="22.00">+ Add to Order</button>
+                <a href="#reserve" class="card-link">Reserve Table &rarr;</a>
+              </div>
             </div>
           </article>
         </div>
@@ -174,13 +193,22 @@
           <span class="section-tag">Explore Flavors</span>
           <h2 class="section-heading">Our Signature Menu</h2>
           <p class="section-subtext">Every dish is prepared freshly to order with uncompromised attention to detail.</p>
+          
+          <!-- Category Filter Bar (Enhancement from project brief) -->
+          <div class="menu-category-bar">
+            <button class="filter-btn active" data-filter="all">All Dishes</button>
+            <button class="filter-btn" data-filter="starters">Starters</button>
+            <button class="filter-btn" data-filter="mains">Mains</button>
+            <button class="filter-btn" data-filter="desserts">Desserts</button>
+            <button class="filter-btn" data-filter="beverages">Beverages</button>
+          </div>
         </div>
 
         <!-- Menu items grid (8 distinct items with image, title, description, price) -->
-        <div class="menu-grid">
+        <div class="menu-grid" id="menu-grid">
 
           <!-- Item 1: Starter -->
-          <article class="menu-card">
+          <article class="menu-card" data-category="starters">
             <div class="menu-img-wrap">
               <img 
                 src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" 
@@ -197,11 +225,12 @@
               <p class="menu-item-desc">
                 Toasted rustic sourdough rubbed with garlic, topped with marinated heirloom tomatoes, basil, and extra virgin olive oil.
               </p>
+              <button type="button" class="btn-card-action btn-add-order" data-name="Bruschetta Pomodoro" data-price="9.50">+ Add to Order</button>
             </div>
           </article>
 
           <!-- Item 2: Starter -->
-          <article class="menu-card">
+          <article class="menu-card" data-category="starters">
             <div class="menu-img-wrap">
               <img 
                 src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=600&q=80" 
@@ -218,11 +247,12 @@
               <p class="menu-item-desc">
                 Pugliese burrata cheese, rainbow cherry tomatoes, wild arugula, pine nuts, and 12-year aged Modena balsamic reduction.
               </p>
+              <button type="button" class="btn-card-action btn-add-order" data-name="Burrata Caprese" data-price="13.00">+ Add to Order</button>
             </div>
           </article>
 
           <!-- Item 3: Main -->
-          <article class="menu-card">
+          <article class="menu-card" data-category="mains">
             <div class="menu-img-wrap">
               <img 
                 src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=600&q=80" 
@@ -239,11 +269,12 @@
               <p class="menu-item-desc">
                 San Marzano D.O.P. tomato sauce, fresh buffalo mozzarella, fresh sweet basil leaves, and cold-pressed extra virgin olive oil.
               </p>
+              <button type="button" class="btn-card-action btn-add-order" data-name="Margherita Verace" data-price="16.50">+ Add to Order</button>
             </div>
           </article>
 
           <!-- Item 4: Main -->
-          <article class="menu-card">
+          <article class="menu-card" data-category="mains">
             <div class="menu-img-wrap">
               <img 
                 src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80" 
@@ -260,11 +291,12 @@
               <p class="menu-item-desc">
                 Handmade pasta tossed with black tiger prawns, tender calamari, sea mussels, white wine, garlic, and fresh parsley.
               </p>
+              <button type="button" class="btn-card-action btn-add-order" data-name="Seafood Tagliatelle" data-price="24.00">+ Add to Order</button>
             </div>
           </article>
 
           <!-- Item 5: Main -->
-          <article class="menu-card">
+          <article class="menu-card" data-category="mains">
             <div class="menu-img-wrap">
               <img 
                 src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=600&q=80" 
@@ -281,11 +313,12 @@
               <p class="menu-item-desc">
                 Grass-fed 10oz ribeye grilled over open coals, served with garlic roasted baby potatoes, broccolini, and red wine jus.
               </p>
+              <button type="button" class="btn-card-action btn-add-order" data-name="Rosemary Prime Ribeye" data-price="32.00">+ Add to Order</button>
             </div>
           </article>
 
           <!-- Item 6: Main -->
-          <article class="menu-card">
+          <article class="menu-card" data-category="mains">
             <div class="menu-img-wrap">
               <img 
                 src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" 
@@ -302,11 +335,12 @@
               <p class="menu-item-desc">
                 Slow-simmered Carnaroli rice infused with Iranian saffron, caramelized shallots, mascarpone, and toasted almonds.
               </p>
+              <button type="button" class="btn-card-action btn-add-order" data-name="Risotto allo Zafferano" data-price="19.50">+ Add to Order</button>
             </div>
           </article>
 
           <!-- Item 7: Dessert -->
-          <article class="menu-card">
+          <article class="menu-card" data-category="desserts">
             <div class="menu-img-wrap">
               <img 
                 src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80" 
@@ -323,11 +357,12 @@
               <p class="menu-item-desc">
                 Espresso-soaked Savoiardi ladyfingers layered with velvety mascarpone zabaione and dusted with premium Dutch cocoa powder.
               </p>
+              <button type="button" class="btn-card-action btn-add-order" data-name="Classic Tiramisu" data-price="8.50">+ Add to Order</button>
             </div>
           </article>
 
           <!-- Item 8: Beverage -->
-          <article class="menu-card">
+          <article class="menu-card" data-category="beverages">
             <div class="menu-img-wrap">
               <img 
                 src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" 
@@ -344,6 +379,7 @@
               <p class="menu-item-desc">
                 Freshly squeezed blood orange juice, sparkling mineral water, splash of elderflower liqueur, and torched rosemary sprig.
               </p>
+              <button type="button" class="btn-card-action btn-add-order" data-name="Sicilian Blood Orange Spritz" data-price="7.00">+ Add to Order</button>
             </div>
           </article>
 
@@ -463,9 +499,9 @@
           <!-- Right Column: Interactive Reservation Form -->
           <div class="reservation-card" id="reserve">
             <h3 class="form-title">Reserve Your Table</h3>
-            <p class="form-desc">Book your dining experience in advance. We'll send a confirmation email promptly.</p>
+            <p class="form-desc">Book your dining experience in advance. Instant confirmation will appear upon submission.</p>
             
-            <form class="reservation-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your reservation request has been received. We look forward to hosting you at Bella Vista Bistro.');">
+            <form class="reservation-form" id="reservation-form" novalidate>
               <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" placeholder="e.g. Eleanor Vance" required>
@@ -491,11 +527,11 @@
                   <label for="resTime">Time</label>
                   <select id="resTime" name="resTime" required>
                     <option value="" disabled selected>Select Time</option>
-                    <option value="12:00">12:00 PM (Lunch)</option>
-                    <option value="13:30">01:30 PM (Lunch)</option>
-                    <option value="18:00">06:00 PM (Dinner)</option>
-                    <option value="19:30">07:30 PM (Dinner)</option>
-                    <option value="20:30">08:30 PM (Dinner)</option>
+                    <option value="12:00 PM">12:00 PM (Lunch)</option>
+                    <option value="01:30 PM">01:30 PM (Lunch)</option>
+                    <option value="06:00 PM">06:00 PM (Dinner)</option>
+                    <option value="07:30 PM">07:30 PM (Dinner)</option>
+                    <option value="08:30 PM">08:30 PM (Dinner)</option>
                   </select>
                 </div>
               </div>
@@ -512,8 +548,8 @@
               </div>
 
               <div class="form-group">
-                <label for="notes">Special Requests / Dietary Notes (Optional)</label>
-                <textarea id="notes" name="notes" rows="3" placeholder="Allergies, high chair, birthday celebration..."></textarea>
+                <label for="notes">Special Requests / Pre-Ordered Dishes (Optional)</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Allergies, high chair, birthday celebration, or pre-ordered dishes..."></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary btn-block">Confirm Reservation</button>
@@ -524,6 +560,40 @@
       </div>
     </section>
   </main>
+
+  <!-- ==================== CART / ORDER DRAWER MODAL ==================== -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Your Order Drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Selected Order</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-items">
+      <!-- Items dynamically populated via script.js -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Estimated Total:</span>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" id="cart-checkout-btn">Proceed to Table Reservation</button>
+    </div>
+  </aside>
+
+  <!-- ==================== BOOKING CONFIRMATION MODAL ==================== -->
+  <div class="modal-overlay" id="confirmation-modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-badge-icon">🎉</div>
+      <h3 class="modal-title">Table Reservation Confirmed!</h3>
+      <p class="modal-desc">Thank you for choosing Bella Vista Bistro. A confirmation SMS/Email has been queued.</p>
+      
+      <div id="modal-details">
+        <!-- Injected via script.js -->
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block" id="modal-close-btn">Done & Return</button>
+    </div>
+  </div>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
@@ -552,9 +622,9 @@
       <div class="footer-col">
         <h4 class="footer-heading">Follow Us</h4>
         <div class="social-links">
-          <a href="#" aria-label="Instagram" class="social-icon">📸 Instagram</a>
-          <a href="#" aria-label="Facebook" class="social-icon">📘 Facebook</a>
-          <a href="#" aria-label="TripAdvisor" class="social-icon">🦉 TripAdvisor</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon">📸 Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon">📘 Facebook</a>
+          <a href="https://tripadvisor.com" target="_blank" rel="noopener noreferrer" class="social-icon">🦉 TripAdvisor</a>
         </div>
       </div>
     </div>
@@ -567,5 +637,7 @@
     </div>
   </footer>
 
+  <!-- Interactive JavaScript logic -->
+  <script src="script.js"></script>
 </body>
 </html>
