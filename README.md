@@ -8,7 +8,11 @@ A clean, responsive, and pocket-friendly cafe website designed specifically for 
 
 ## 🌟 Live Demo & Links
 - **Local Server**: [http://localhost:8080](http://localhost:8080)
-- **GitHub Repository**: [https://github.com/ANIMETIWASIISH/campus-bites](https://github.com/ANIMETIWASIISH/campus-bites)
+- **GitHub Repository**: [https://github.com/ANIMETIWASIISH/campus-bites
+- **Live Website (Vercel)**: https://campus-bitess.vercel.app
+- **Live Website (GitHub Pages)**: https://animetiwasiish.github.io/campus-bites/](https://github.com/ANIMETIWASIISH/campus-bites
+- **Live Website (Vercel)**: https://campus-bitess.vercel.app
+- **Live Website (GitHub Pages)**: https://animetiwasiish.github.io/campus-bites/)
 
 ---
 
