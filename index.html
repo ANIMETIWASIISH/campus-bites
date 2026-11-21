@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bella Vista Bistro - Fresh Mediterranean & Artisanal Dining. View our menu, daily specials, and reserve your table.">
+  <title>Bella Vista Bistro | Artisanal Dining & Fresh Flavors</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts for crisp elegant typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#top" class="brand-logo" aria-label="Bella Vista Bistro Home">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">Bella Vista <em>Bistro</em></span>
+      </a>
+
+      <!-- Responsive Mobile Menu Toggle (Pure HTML/CSS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#specials" class="nav-link">Specials</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Hours & Contact</a></li>
+          <li><a href="#reserve" class="nav-btn">Book a Table</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="hero-badge">✨ Crafted with Passion & Farm-Fresh Ingredients</span>
+        <h1 class="hero-title">Experience the Art of Authentic Mediterranean Dining</h1>
+        <p class="hero-subtitle">
+          Savor wood-fired flavours, artisanal pastas, and handcrafted desserts made daily from local seasonal harvests.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+          <a href="#reserve" class="btn btn-secondary">Reserve a Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" 
+              alt="Warm ambiance inside Bella Vista Bistro dining room" 
+              class="about-img"
+              loading="lazy"
+            >
+            <div class="about-badge-card">
+              <span class="badge-num">12+</span>
+              <span class="badge-label">Years of Culinary Excellence</span>
+            </div>
+          </div>
+          <div class="about-text-content">
+            <span class="section-tag">Our Story & Heritage</span>
+            <h2 class="section-heading">Rooted in Tradition, Inspired by Modern Taste</h2>
+            <p>
+              Founded in 2012, Bella Vista Bistro began with a simple philosophy: honoring ancestral Mediterranean recipes while celebrating fresh, sustainably-sourced local ingredients.
+            </p>
+            <p>
+              From hand-rolled ribbons of pasta and slow-fermented sourdough pizza to olive oils pressed in small batches, every plate tells a story of craftsmanship, simplicity, and warmth.
+            </p>
+            <div class="features-list">
+              <div class="feature-item">
+                <span class="feature-icon">🌱</span>
+                <div>
+                  <strong>100% Organic & Local</strong>
+                  <p>Produce sourced weekly from regional organic farms.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">👨‍🍳</span>
+                <div>
+                  <strong>Master Chef Craft</strong>
+                  <p>Handmade recipes perfected over three decades.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🍷</span>
+                <div>
+                  <strong>Curated Wine Pairings</strong>
+                  <p>Artisanal wines selected to complement every course.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SPECIALS & OFFERS ==================== -->
+    <section class="specials-section" id="specials">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Chef's Highlights</span>
+          <h2 class="section-heading">Today's Seasonal Specials</h2>
+          <p class="section-subtext">Limited-time creations prepared with today’s freshest market arrivals.</p>
+        </div>
+
+        <div class="specials-grid">
+          <article class="special-card featured">
+            <span class="card-ribbon">Chef's Special</span>
+            <img 
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" 
+              alt="Grilled Sea Bass with Lemon Herb Butter" 
+              class="special-img"
+              loading="lazy"
+            >
+            <div class="special-body">
+              <div class="special-meta">
+                <span class="dish-category">Catch of the Day</span>
+                <span class="special-price">$28.50</span>
+              </div>
+              <h3 class="special-title">Pan-Seared Mediterranean Sea Bass</h3>
+              <p class="special-desc">
+                Crispy skin wild sea bass served over saffron risotto, blistered cherry tomatoes, and micro-herbs with citrus butter glaze.
+              </p>
+              <a href="#reserve" class="card-link">Order / Reserve &rarr;</a>
+            </div>
+          </article>
+
+          <article class="special-card">
+            <span class="card-ribbon offer">20% Off Lunch</span>
+            <img 
+              src="https://images.unsplash.com/photo-1579684947550-22e945225d9a?auto=format&fit=crop&w=700&q=80" 
+              alt="Truffle Wild Mushroom Pappardelle" 
+              class="special-img"
+              loading="lazy"
+            >
+            <div class="special-body">
+              <div class="special-meta">
+                <span class="dish-category">Handcrafted Pasta</span>
+                <span class="special-price">$22.00</span>
+              </div>
+              <h3 class="special-title">Truffle Wild Mushroom Pappardelle</h3>
+              <p class="special-desc">
+                Hand-cut egg ribbon pasta tossed in black truffle butter, forest mushrooms, aged Parmigiano Reggiano, and fresh thyme.
+              </p>
+              <a href="#reserve" class="card-link">Order / Reserve &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MENU SECTION ==================== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Explore Flavors</span>
+          <h2 class="section-heading">Our Signature Menu</h2>
+          <p class="section-subtext">Every dish is prepared freshly to order with uncompromised attention to detail.</p>
+        </div>
+
+        <!-- Menu items grid (8 distinct items with image, title, description, price) -->
+        <div class="menu-grid">
+
+          <!-- Item 1: Starter -->
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" 
+                alt="Classic Bruschetta Pomodoro" 
+                loading="lazy"
+              >
+              <span class="menu-tag">Starter</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-header-line">
+                <h3 class="menu-item-title">Bruschetta Pomodoro</h3>
+                <span class="menu-price">$9.50</span>
+              </div>
+              <p class="menu-item-desc">
+                Toasted rustic sourdough rubbed with garlic, topped with marinated heirloom tomatoes, basil, and extra virgin olive oil.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 2: Starter -->
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=600&q=80" 
+                alt="Creamy Burrata Caprese salad" 
+                loading="lazy"
+              >
+              <span class="menu-tag">Starter</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-header-line">
+                <h3 class="menu-item-title">Burrata Caprese</h3>
+                <span class="menu-price">$13.00</span>
+              </div>
+              <p class="menu-item-desc">
+                Pugliese burrata cheese, rainbow cherry tomatoes, wild arugula, pine nuts, and 12-year aged Modena balsamic reduction.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 3: Main -->
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=600&q=80" 
+                alt="Wood Fired Margherita Pizza" 
+                loading="lazy"
+              >
+              <span class="menu-tag">Main</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-header-line">
+                <h3 class="menu-item-title">Margherita Verace</h3>
+                <span class="menu-price">$16.50</span>
+              </div>
+              <p class="menu-item-desc">
+                San Marzano D.O.P. tomato sauce, fresh buffalo mozzarella, fresh sweet basil leaves, and cold-pressed extra virgin olive oil.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 4: Main -->
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80" 
+                alt="Seafood Tagliatelle Marinara" 
+                loading="lazy"
+              >
+              <span class="menu-tag">Main</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-header-line">
+                <h3 class="menu-item-title">Seafood Tagliatelle</h3>
+                <span class="menu-price">$24.00</span>
+              </div>
+              <p class="menu-item-desc">
+                Handmade pasta tossed with black tiger prawns, tender calamari, sea mussels, white wine, garlic, and fresh parsley.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 5: Main -->
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=600&q=80" 
+                alt="Rosemary Prime Ribeye Steak" 
+                loading="lazy"
+              >
+              <span class="menu-tag">Main</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-header-line">
+                <h3 class="menu-item-title">Rosemary Prime Ribeye</h3>
+                <span class="menu-price">$32.00</span>
+              </div>
+              <p class="menu-item-desc">
+                Grass-fed 10oz ribeye grilled over open coals, served with garlic roasted baby potatoes, broccolini, and red wine jus.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 6: Main -->
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" 
+                alt="Saffron & Wild Mushroom Risotto" 
+                loading="lazy"
+              >
+              <span class="menu-tag">Main</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-header-line">
+                <h3 class="menu-item-title">Risotto allo Zafferano</h3>
+                <span class="menu-price">$19.50</span>
+              </div>
+              <p class="menu-item-desc">
+                Slow-simmered Carnaroli rice infused with Iranian saffron, caramelized shallots, mascarpone, and toasted almonds.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 7: Dessert -->
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80" 
+                alt="Classic Venetian Tiramisu" 
+                loading="lazy"
+              >
+              <span class="menu-tag">Dessert</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-header-line">
+                <h3 class="menu-item-title">Classic Tiramisu</h3>
+                <span class="menu-price">$8.50</span>
+              </div>
+              <p class="menu-item-desc">
+                Espresso-soaked Savoiardi ladyfingers layered with velvety mascarpone zabaione and dusted with premium Dutch cocoa powder.
+              </p>
+            </div>
+          </article>
+
+          <!-- Item 8: Beverage -->
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" 
+                alt="Blood Orange & Rosemary Spritz" 
+                loading="lazy"
+              >
+              <span class="menu-tag">Beverage</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-header-line">
+                <h3 class="menu-item-title">Sicilian Blood Orange Spritz</h3>
+                <span class="menu-price">$7.00</span>
+              </div>
+              <p class="menu-item-desc">
+                Freshly squeezed blood orange juice, sparkling mineral water, splash of elderflower liqueur, and torched rosemary sprig.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Guest Experiences</span>
+          <h2 class="section-heading">What Our Diners Say</h2>
+          <p class="section-subtext">Heartfelt words from our regulars and food connoisseurs.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-text">
+              "The homemade truffle pappardelle was transcendental. From the warm welcoming staff to the cozy candlelit atmosphere, Bella Vista never disappoints."
+            </p>
+            <footer class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sophia Martinez" class="reviewer-avatar">
+              <div>
+                <cite class="reviewer-name">Sophia Martinez</cite>
+                <span class="reviewer-title">Food & Travel Columnist</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-text">
+              "We celebrated our wedding anniversary here last Saturday. The grilled sea bass was flaky perfection, and the staff treated us like royalty. 10/10 recommend!"
+            </p>
+            <footer class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David Reynolds" class="reviewer-avatar">
+              <div>
+                <cite class="reviewer-name">David Reynolds</cite>
+                <span class="reviewer-title">Local Resident & Architect</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <div class="star-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="quote-text">
+              "Hands down the best authentic Neapolitan pizza and tiramisu in the city. You can literally taste the freshness of the ingredients in every single bite."
+            </p>
+            <footer class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" class="reviewer-avatar">
+              <div>
+                <cite class="reviewer-name">Elena Rostova</cite>
+                <span class="reviewer-title">Culinary Blogger</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT, HOURS & RESERVATION ==================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Left Column: Opening Hours & Location Info -->
+          <div class="info-card">
+            <span class="section-tag">Visit & Connect</span>
+            <h2 class="section-heading">Opening Hours & Location</h2>
+            <p class="contact-intro">Join us for lunch, dinner, or weekend brunch. Walk-ins are always welcomed, though reservations are recommended on weekends.</p>
+
+            <div class="hours-block">
+              <h3 class="hours-title">🕒 Service Hours</h3>
+              <ul class="hours-list">
+                <li>
+                  <span class="day">Monday – Thursday</span>
+                  <span class="time">11:30 AM – 10:00 PM</span>
+                </li>
+                <li>
+                  <span class="day">Friday – Saturday</span>
+                  <span class="time">11:30 AM – 11:30 PM</span>
+                </li>
+                <li>
+                  <span class="day">Sunday (Brunch & Dinner)</span>
+                  <span class="time">10:00 AM – 9:00 PM</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="details-block">
+              <div class="detail-item">
+                <span class="detail-icon">📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <p>42 Olive Grove Boulevard, Harbor District, CA 94102</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:+14155550198">+1 (415) 555-0198</a></p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:hello@bellavistabistro.com">hello@bellavistabistro.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Reservation Form -->
+          <div class="reservation-card" id="reserve">
+            <h3 class="form-title">Reserve Your Table</h3>
+            <p class="form-desc">Book your dining experience in advance. We'll send a confirmation email promptly.</p>
+            
+            <form class="reservation-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your reservation request has been received. We look forward to hosting you at Bella Vista Bistro.');">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Eleanor Vance" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(415) 000-0000" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="resDate">Date</label>
+                  <input type="date" id="resDate" name="resDate" required>
+                </div>
+                <div class="form-group">
+                  <label for="resTime">Time</label>
+                  <select id="resTime" name="resTime" required>
+                    <option value="" disabled selected>Select Time</option>
+                    <option value="12:00">12:00 PM (Lunch)</option>
+                    <option value="13:30">01:30 PM (Lunch)</option>
+                    <option value="18:00">06:00 PM (Dinner)</option>
+                    <option value="19:30">07:30 PM (Dinner)</option>
+                    <option value="20:30">08:30 PM (Dinner)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="guests">Party Size</label>
+                <select id="guests" name="guests" required>
+                  <option value="1">1 Person</option>
+                  <option value="2" selected>2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5+">5+ Guests (Private Area)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="notes">Special Requests / Dietary Notes (Optional)</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Allergies, high chair, birthday celebration..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Confirm Reservation</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <a href="#top" class="brand-logo footer-logo">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">Bella Vista <em>Bistro</em></span>
+        </a>
+        <p class="footer-tagline">
+          Authentic Mediterranean cuisine prepared with care, passion, and the finest seasonal harvest.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Our Story</a></li>
+          <li><a href="#specials">Daily Specials</a></li>
+          <li><a href="#menu">Full Menu</a></li>
+          <li><a href="#testimonials">Customer Reviews</a></li>
+          <li><a href="#contact">Location & Hours</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Follow Us</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram" class="social-icon">📸 Instagram</a>
+          <a href="#" aria-label="Facebook" class="social-icon">📘 Facebook</a>
+          <a href="#" aria-label="TripAdvisor" class="social-icon">🦉 TripAdvisor</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-row">
+        <p>&copy; 2026 Bella Vista Bistro. All rights reserved. Created for CA Web Development Project 1.</p>
+        <a href="#top" class="back-to-top" aria-label="Back to top of page">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
