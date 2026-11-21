@@ -8,7 +8,7 @@ A clean, responsive, and pocket-friendly cafe website designed specifically for 
 
 ## 🌟 Live Demo & Links
 - **Local Server**: [http://localhost:8080](http://localhost:8080)
-- **GitHub Repository**: [https://github.com/ANIMETIWASIISH/restaurant-website](https://github.com/ANIMETIWASIISH/restaurant-website)
+- **GitHub Repository**: [https://github.com/ANIMETIWASIISH/campus-bites](https://github.com/ANIMETIWASIISH/campus-bites)
 
 ---
 
